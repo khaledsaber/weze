@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:weze/views/language/language_Screen.dart';
 import '';
 import '../../config/resources.dart';
@@ -28,7 +29,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+    ));
     return Scaffold(
+      extendBodyBehindAppBar: true,
       body: Stack(
         children: [
           Image.asset(

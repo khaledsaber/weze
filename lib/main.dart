@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       scaffoldBackgroundColor: Colors.white
       ),
       debugShowCheckedModeBanner: false,
-      home: const OnBoardingScreen(),
+      home: const SplashScreen(),
       routes: {
         R.routes.languageRoue: (ctx) => const LanguageScreen(),
         R.routes.onBoarding:(ctx)=> const OnBoardingScreen(),

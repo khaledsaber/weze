@@ -100,7 +100,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     height: 40,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, R.routes.loginScreen);
+                    },
                     child: const Text('OK'),
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(

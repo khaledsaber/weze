@@ -78,13 +78,43 @@ class LoginScreen extends StatelessWidget {
                           SizedBox(
                             height: defaultSize,
                           ),
-                          Text(
+                          const Text(
                             'Type your phone number here to login',
                             textAlign: TextAlign.center,
                           ),
-                          InternationalPhoneNumberInput(
-                            onInputChanged: (v) {},
-                           countries: ["PS"],
+                          SizedBox(
+                            height: defaultSize * 3,
+                          ),
+                          Container(
+                            height: defaultSize * 4.5,
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            decoration: BoxDecoration(
+                              color: const Color(0xfff1f2f6),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: InternationalPhoneNumberInput(
+                              onInputChanged: (v) {},
+                              countries: const ["PS"],
+                              inputDecoration: InputDecoration(
+                                  contentPadding: EdgeInsets.only(bottom: 15),
+                                  border: InputBorder.none,
+                                  hintText: 'Your phone number',
+                                  hintStyle:
+                                      TextStyle(fontSize: defaultSize * 1.2)),
+                            ),
+                          ),
+                          SizedBox(
+                            height: defaultSize * 5,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Next',
+                              style: TextStyle(fontSize: defaultSize * 1.5),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                                fixedSize:
+                                    Size(double.maxFinite, defaultSize * 4.5)),
                           )
                         ],
                       ),
