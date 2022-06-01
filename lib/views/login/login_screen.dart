@@ -71,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                           Text(
                             'Welcome Back',
                             style: TextStyle(
-                                color: Color(0xff1e2432),
+                                color: const Color(0xff1e2432),
                                 fontSize: SizeConfig.defaultSize * 3,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -96,7 +96,8 @@ class LoginScreen extends StatelessWidget {
                               onInputChanged: (v) {},
                               countries: const ["PS"],
                               inputDecoration: InputDecoration(
-                                  contentPadding: EdgeInsets.only(bottom: 15),
+                                  contentPadding:
+                                      const EdgeInsets.only(bottom: 15),
                                   border: InputBorder.none,
                                   hintText: 'Your phone number',
                                   hintStyle:
@@ -107,7 +108,10 @@ class LoginScreen extends StatelessWidget {
                             height: defaultSize * 5,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, R.routes.verificationScreen);
+                            },
                             child: Text(
                               'Next',
                               style: TextStyle(fontSize: defaultSize * 1.5),
@@ -115,6 +119,21 @@ class LoginScreen extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                                 fixedSize:
                                     Size(double.maxFinite, defaultSize * 4.5)),
+                          ),
+                          SizedBox(
+                            height: defaultSize * 4,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, R.routes.interestsScreen);
+                            },
+                            child: Text(
+                              'SKIP',
+                              style: TextStyle(
+                                  color: const Color(0xffacb1c0),
+                                  fontSize: defaultSize * 1.5),
+                            ),
                           )
                         ],
                       ),
