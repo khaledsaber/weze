@@ -6,4 +6,5 @@ class WezeRoutes {
   String loginScreen = '/login_screen';
   String verificationScreen = '/verification_screen';
   String interestsScreen = '/interests_screen';
+  String notificationsScreen = '/notifications_Screen';
 }

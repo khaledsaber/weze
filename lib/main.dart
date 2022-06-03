@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:weze/views/category/category_Screen.dart';
+import 'package:weze/views/favorites/favorites_screen.dart';
 import 'package:weze/views/interests/interests_screen.dart';
 import 'package:weze/views/language/language_Screen.dart';
 import 'package:weze/views/login/login_screen.dart';
 import 'package:weze/views/login/verification_screen.dart';
+import 'package:weze/views/notifications/notifications_screen.dart';
+import 'package:weze/views/settings/about_us_screen.dart';
+import 'package:weze/views/settings/change_phone_screen.dart';
+import 'package:weze/views/settings/contact_us_screen.dart';
+import 'package:weze/views/settings/linked_account_screen.dart';
+import 'package:weze/views/settings/more_screen.dart';
+import 'package:weze/views/settings/terms.dart';
+import 'package:weze/views/settings/thanks_Screen.dart';
+import 'package:weze/views/settings/user_points_screen.dart';
 import 'package:weze/views/splash/on_boarding_screen.dart';
 import 'package:weze/views/splash/splash_screen.dart';
 import 'package:flutter/services.dart';
@@ -34,13 +45,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home:  const MoreScreen(),
       routes: {
         R.routes.languageRoue: (ctx) => const LanguageScreen(),
         R.routes.onBoarding: (ctx) => const OnBoardingScreen(),
         R.routes.loginScreen: (ctx) => const LoginScreen(),
-        R.routes.verificationScreen:(ctx)=>const VerificationScreen(),
-        R.routes.interestsScreen:(ctx)=>const InterestsScreen()
+        R.routes.verificationScreen: (ctx) => const VerificationScreen(),
+        R.routes.interestsScreen: (ctx) => const InterestsScreen(),
+        R.routes.notificationsScreen: (ctx) => const NotificationsScreen()
       },
     );
   }

@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
             width: double.infinity,
             fit: BoxFit.fill,
           ),
-          Center(child: Image.asset(R.images.splashImage,width: MediaQuery.of(context).size.width*0.3,))
+          Center(child: Image.asset(R.images.lightAppImage,width: MediaQuery.of(context).size.width*0.3,))
         ],
       ),
     );
