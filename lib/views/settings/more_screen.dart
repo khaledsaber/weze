@@ -4,8 +4,16 @@ import 'package:weze/widgets/title_app_bar.dart';
 
 import '../../config/resources.dart';
 
-class MoreScreen extends StatelessWidget {
+class MoreScreen extends StatefulWidget {
   const MoreScreen({Key? key}) : super(key: key);
+
+  @override
+  State<MoreScreen> createState() => _MoreScreenState();
+}
+
+class _MoreScreenState extends State<MoreScreen> {
+
+  bool on = false;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +70,7 @@ class MoreScreen extends StatelessWidget {
                padding: EdgeInsets.symmetric(horizontal: 20),
                child: Text('More Options',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold,),),
              ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -70,22 +78,72 @@ class MoreScreen extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Language',
-                    style: const TextStyle(fontSize: 17),
+                  const Text(
+                    'Dark mode',
+                    style: TextStyle(fontSize: 17),
                   ),
                   Expanded(
                     child: Container(),
                   ),
-                  Text('English'),
-                  SizedBox(width: 5,),
+                  CupertinoSwitch(onChanged: (val){
+                    setState(() {
+                      on = val;
+                    });
+                  }, value: on,),
+                  const SizedBox(width: 5,),
+
+                ],
+              ),
+            ),
+            const Divider(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    'Language',
+                    style: TextStyle(fontSize: 17),
+                  ),
+                  Expanded(
+                    child: Container(),
+                  ),
+                  const Text('English'),
+                  const SizedBox(width: 5,),
                   Image.asset(
                     R.icons.rightArrow,
                     width: 8,
                   )
                 ],
               ),
-            )
+            ),
+            const Divider(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    'Linked Accounts',
+                    style: TextStyle(fontSize: 17),
+                  ),
+                  Expanded(
+                    child: Container(),
+                  ),
+                  const Text('Instagram'),
+                  const SizedBox(width: 5,),
+                  Image.asset(
+                    R.icons.rightArrow,
+                    width: 8,
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 20,),
 
           ],
         ),
@@ -132,4 +190,5 @@ class MoreScreen extends StatelessWidget {
       ],
     );
   }
+
 }

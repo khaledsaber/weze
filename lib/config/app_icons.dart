@@ -14,4 +14,11 @@ class WezeIcons {
   String messages = "$path/messages.png";
   String Mypoints = "$path/points.png";
   String rightArrow = "$path/arrow_right.png";
+  String userIcon = "$path/user_blue.png";
+  String greenCheckIcon = "$path/icon_check.png";
+  String pencil = "$path/pencil.png";
+  String changePhone = "$path/change_number.png";
+  String termsIcon = "$path/terms_icon.png";
+  String signOut = "$path/sign_out.png";
 }
+
