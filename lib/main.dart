@@ -5,6 +5,7 @@ import 'package:weze/views/interests/interests_screen.dart';
 import 'package:weze/views/language/language_Screen.dart';
 import 'package:weze/views/login/login_screen.dart';
 import 'package:weze/views/login/verification_screen.dart';
+import 'package:weze/views/navigation/navigation_screen.dart';
 import 'package:weze/views/notifications/notifications_screen.dart';
 import 'package:weze/views/settings/about_us_screen.dart';
 import 'package:weze/views/settings/account_settings_screen.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
-      home:  const MessagesScreen(),
+      home:  const SplashScreen(),
       routes: {
         R.routes.languageRoue: (ctx) => const LanguageScreen(),
         R.routes.onBoarding: (ctx) => const OnBoardingScreen(),

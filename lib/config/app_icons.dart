@@ -20,5 +20,10 @@ class WezeIcons {
   String changePhone = "$path/change_number.png";
   String termsIcon = "$path/terms_icon.png";
   String signOut = "$path/sign_out.png";
+  String homeIcon = "$path/home.png";
+  String userNavIcon = "$path/user.png";
+  String navLocationIcon = "$path/nav_location.png";
+  String train = "$path/train.png";
+  String question = "$path/question.png";
 }
 
