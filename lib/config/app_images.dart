@@ -14,4 +14,5 @@ class WezeImages {
   String contactUSImg = "$path/contact_us.png";
   String cup = "$path/cup.png";
   String like = "$path/like.png";
+  String homeBacgroune = "$path/home_background.png";
 }

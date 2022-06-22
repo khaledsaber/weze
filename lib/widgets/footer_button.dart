@@ -7,11 +7,12 @@ class FooterButton extends StatelessWidget {
   const FooterButton({
     Key? key,
     required this.title,
-    this.radius = 0,
+    this.radius = 0,  this.VoidCallback,
   }) : super(key: key);
 
   final String title;
   final double radius;
+  final VoidCallback;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class FooterButton extends StatelessWidget {
           ),
           fixedSize: Size(MediaQuery.of(context).size.width, 50),
           primary: R.colors.buttonBlueColor),
-      onPressed: () {},
+      onPressed: VoidCallback ,
       child: Text(
         title,
         style: TextStyle(fontSize: defaultSize * 1.5),

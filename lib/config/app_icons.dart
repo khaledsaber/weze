@@ -25,5 +25,18 @@ class WezeIcons {
   String navLocationIcon = "$path/nav_location.png";
   String train = "$path/train.png";
   String question = "$path/question.png";
+  String naviHome = "$path/navigation_home.png";
+  String naviHomeDotted = "$path/navi_home_dotted.png";
+  String naviLocation = "$path/navigation_location.png";
+  String naviLocationDotted = "$path/navi_location_dotted.png";
+  String naviQuestion = "$path/navigation_question.png";
+  String naviQuestionDotted = "$path/navi_question_dotted.png";
+  String naviTrain = "$path/navigation_train.png";
+  String naviTrainDotted = "$path/navi_train_dotted.png";
+  String naviUser = "$path/navigation_user.png";
+  String naviUserDotted = "$path/navi_user_dotted.png";
+  String notificationBell = "$path/bell.png";
+  String search = "$path/search.png";
+
 }
 

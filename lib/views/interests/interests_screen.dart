@@ -43,7 +43,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
                 child: InterestsGrid(),
               ),
               SizedBox(height: 20,),
-              FooterButton(title: 'Get Started',radius: 5,),
+              FooterButton(title: 'Get Started',radius: 5, VoidCallback: (){print('pressed');},),
             ],
           ),
         ),

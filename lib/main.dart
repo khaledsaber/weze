@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
-      home:  const SplashScreen(),
+      home:  const NavigationScreen(),
       routes: {
         R.routes.languageRoue: (ctx) => const LanguageScreen(),
         R.routes.onBoarding: (ctx) => const OnBoardingScreen(),
