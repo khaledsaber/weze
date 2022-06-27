@@ -9,6 +9,7 @@ import '../../config/resources.dart';
 import '../category/components/category_list_item.dart';
 import '../splash/components/dash_line.dart';
 import '../splash/components/page_view_item.dart';
+import 'components/explore_places.dart';
 import 'components/header.dart';
 import 'components/home_categories_list.dart';
 import 'components/section_title.dart';
@@ -124,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: defaultSize * 2),
-                    child: SectionTitle(title: 'Categories'),
+                    child: const SectionTitle(title: 'Categories'),
                   ),
                   SizedBox(
                     height: defaultSize,
@@ -138,14 +139,16 @@ class HomeScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         const SectionTitle(title: 'Explore Places'),
-                        Expanded(child: Container()),
+                        Expanded(
+                          child: Container(),
+                        ),
                         const Text(
                           'More',
                           style: TextStyle(
                             color: Color(0xff9ca0bc),
                           ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_forward,
                           size: 15,
                           color: Color(0xff9ca0bc),
@@ -153,7 +156,119 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: defaultSize * 2,
+                  ),
+                  const ExplorePlaces(),
+                  SizedBox(
+                    height: defaultSize * 2,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: defaultSize * 2),
+                    child: Row(
+                      children: [
+                        const SectionTitle(title: 'Next Trips'),
+                        Expanded(
+                          child: Container(),
+                        ),
+                        const Text(
+                          'More',
+                          style: TextStyle(
+                            color: Color(0xff9ca0bc),
+                          ),
+                        ),
+                        const Icon(
+                          Icons.arrow_forward,
+                          size: 15,
+                          color: Color(0xff9ca0bc),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: defaultSize * 2,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: defaultSize * 2),
+                    child: SizedBox(
+                      height: 220,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 10,
+                        itemBuilder: (context, index) => Container(
+                          padding: const EdgeInsets.all(5),
+                          margin: const EdgeInsets.only(right: 10),
+                          //height: 250,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: const Color(
+                                0xfff1f1f1,
+                              ),
+                            ),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                'assets/images/trees.png',
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text('Place Name'),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                '5 May 2022',
+                                style: TextStyle(color: Color(0xff9ca0bc)),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: defaultSize * 3,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal:  defaultSize*2),
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Image.asset(
+                          R.images.requestTrip,
+                        ),
+                        Column(
+                          children: [
+                            SizedBox(
+                              height: 20,
+                            ),
+                            const Text(
+                              'REQUEST YOUT TRIP',
+                              style: TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Start'),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: defaultSize * 3,
+                  ),
                 ],
+
               ),
             ),
           ],
