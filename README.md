@@ -1,3 +1,3 @@
 # WEZE APP
 
-*trip organizing app manages user to choose among several tour places.*
+# *trip organizing app manages user to choose among several tour places.*
